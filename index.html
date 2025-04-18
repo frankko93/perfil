@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Luciano Aballay | Software Engineer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Franco Luciano Aballay</div>
+                <div class="nav-links">
+                    <a href="#hero">Sobre mí</a>
+                    <a href="#experiencia">Experiencia</a>
+                    <a href="#tecnologias">Tecnologías</a>
+                    <a href="#pasatiempos">Pasatiempos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="language-selector">
+                    <button class="active" data-lang="es">ES</button>
+                    <button data-lang="en">EN</button>
+                    <button data-lang="it">IT</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Franco Luciano Aballay</h1>
+                    <h2>Software Engineer</h2>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Catania, Sicilia, Italia</p>
+                    <p class="summary">Apasionado por crear soluciones con tecnología, siempre con un enfoque práctico y trabajando codo a codo con equipos diversos.</p>
+                    <div class="profile-details">
+                        <div class="about-me-tag" id="sobre-mi">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Sobre mí</span>
+                        </div>
+                        <p>Soy un ingeniero de software con experiencia en el desarrollo de aplicaciones web y móviles. Me apasiona crear soluciones tecnológicas que impacten positivamente en la vida de las personas.</p>
+                        <p>A lo largo de mi carrera, he colaborado en equipos multidisciplinarios, lo que me ha permitido desarrollar habilidades de comunicación y trabajo en equipo, además de mis conocimientos técnicos.</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn primary">Contactar</a>
+                        <a href="#experiencia" class="btn secondary">Ver experiencia</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/profile.jpg" alt="Franco Luciano Aballay">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-i18n="experiencia.titulo">Experiencia Laboral</h2>
+            
+            <div class="job-card">
+                <div class="job-header">
+                    <h3 data-i18n="experiencia.actual.rol">Software Engineer</h3>
+                    <div class="company-info">
+                        <span class="company" data-i18n="experiencia.actual.empresa">Pomelo</span>
+                        <span class="period" data-i18n="experiencia.actual.periodo">2022 - Actualidad</span>
+                    </div>
+                </div>
+                <div class="job-description">
+                    <p data-i18n="experiencia.actual.descripcion">Desarrollo de soluciones fintech para procesamiento de pagos y servicios financieros, con enfoque principal en backend pero también contribuyendo al frontend. Implementación de APIs RESTful y arquitecturas escalables.</p>
+                    <ul class="job-highlights">
+                        <li data-i18n="experiencia.actual.logros.0">Desarrollo de microservicios con Node.js, TypeScript, Java y Golang (Algunos con distintos framerworks)</li>
+                        <li data-i18n="experiencia.actual.logros.1">Implementación de distintas arquitecturas y servicios en AWS</li>
+                        <li data-i18n="experiencia.actual.logros.2">Integración con APIs de distintos proveedores (Governamentales, de Pagos, Regulatorios, etc)</li>
+                        <li data-i18n="experiencia.actual.logros.3">Optimización de rendimiento y seguridad de APIs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <h3 data-i18n="experiencia.anterior.rol">Fullstack Developer</h3>
+                    <div class="company-info">
+                        <span class="company" data-i18n="experiencia.anterior.empresa">Mercado Libre</span>
+                        <span class="period" data-i18n="experiencia.anterior.periodo">2019 - 2022</span>
+                    </div>
+                </div>
+                <div class="job-description">
+                    <p data-i18n="experiencia.anterior.descripcion">Desarrollo fullstack para la plataforma de comercio y pagos electrónicos, implementando tanto servicios frontend como backend e interfaces de usuario, trabajando en equipos ágiles y contribuyendo a la mejora continua.</p>
+                    <ul class="job-highlights">
+                        <li data-i18n="experiencia.anterior.logros.0">Implementación de APIs escalables con NodeJS, Goland, Java y Spring Boot</li>
+                        <li data-i18n="experiencia.anterior.logros.1">Desarrollo de frontends con React y tecnologías afines</li>
+                        <li data-i18n="experiencia.anterior.logros.2">Integración con bases de datos NoSQL y relacionales</li>
+                        <li data-i18n="experiencia.anterior.logros.3">Implementación de patrones de diseño para microservicios</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="previous-experience">
+                <h3 class="previous-title">Otra experiencia previa...</h3>
+                <div class="previous-jobs">
+                    <div class="previous-job">
+                        <div class="job-role">Programador de sistemas</div>
+                        <div class="job-company">Secretaria de Estado de Deportes</div>
+                        <div class="job-period">julio 2018 - marzo 2019</div>
+                        <p class="job-brief">Provincia de San Juan, Argentina</p>
+                    </div>
+                    <div class="previous-job">
+                        <div class="job-role">Desarrollador de software de Java EE y Bases de Datos Oracle</div>
+                        <div class="job-company">Tarjeta de Crédito Fiel</div>
+                        <div class="job-period">septiembre 2016 - febrero 2018</div>
+                        <p class="job-brief">Provincia de San Juan, Argentina</p>
+                    </div>
+                    <div class="previous-job">
+                        <div class="job-role">Programador web</div>
+                        <div class="job-company">Aserto Diseño y Desarrollo Tecnólogicos</div>
+                        <div class="job-period">enero 2014 - agosto 2016</div>
+                        <p class="job-brief">Provincia de San Juan, Argentina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="technologies">
+        <div class="container">
+            <h2 class="section-title" data-i18n="tecnologias.titulo">Tecnologías</h2>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3 data-i18n="tecnologias.categorias.lenguajes">Lenguajes</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <i class="fab fa-golang"></i>
+                            <span data-i18n="tecnologias.items.golang">Go (Golang)</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-java"></i>
+                            <span data-i18n="tecnologias.items.java">Java</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js-square"></i>
+                            <span data-i18n="tecnologias.items.typescript">TypeScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span data-i18n="tecnologias.items.js">JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span data-i18n="tecnologias.items.html">HTML / CSS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span data-i18n="tecnologias.items.sql">SQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-terminal"></i>
+                            <span data-i18n="tecnologias.items.bash">Bash / Shell scripting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 data-i18n="tecnologias.categorias.herramientas">Herramientas y tecnologías</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <i class="fab fa-aws"></i>
+                            <span data-i18n="tecnologias.items.aws">AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span data-i18n="tecnologias.items.git">Git & GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span data-i18n="tecnologias.items.docker">Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-leaf"></i>
+                            <span data-i18n="tecnologias.items.spring">Spring Boot</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span data-i18n="tecnologias.items.react">React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span data-i18n="tecnologias.items.node">Node.js / Express</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span data-i18n="tecnologias.items.tailwind">Tailwind CSS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <span data-i18n="tecnologias.items.cicd">CI/CD</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span data-i18n="tecnologias.items.nosql">NoSQL / SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pasatiempos" class="hobbies">
+        <div class="container">
+            <h2 class="section-title">Pasatiempos</h2>
+            <div class="hobbies-content">
+                <div class="hobby-item">
+                    <i class="fas fa-running"></i>
+                    <h3>Deportes</h3>
+                    <p>Me gusta mantenerme activo. Juego pádel y fútbol varias veces por semana, voy al gimnasio con regularidad y disfruto todo lo que implique movimiento y energía.</p>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-water"></i>
+                    <h3>Buceo</h3>
+                    <p>Soy buzo certificado y me fascina explorar el mundo submarino. Es una forma única de conectar con la naturaleza desde otra perspectiva.</p>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-camera"></i>
+                    <h3>Fotografía</h3>
+                    <p>La fotografía es una forma de capturar momentos, lugares y detalles que me inspiran. Es un hobby que combina creatividad con observación.</p>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-plane"></i>
+                    <h3>Viajar y descubrir</h3>
+                    <p>Me encanta conocer nuevos lugares, culturas y comidas. Siempre busco experiencias auténticas, cerca del mar si es posible.</p>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Tecnología y aprendizaje continuo</h3>
+                    <p>Siempre estoy explorando nuevas herramientas, aprendiendo sobre inteligencia artificial o metido en algún proyecto personal para seguir creciendo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-links">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span class="contact-title">E-mail</span>
+                    <a href="mailto:francoaballay@email.com" class="contact-action-btn">Enviar correo</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span class="contact-title">LinkedIn</span>
+                    <a href="https://linkedin.com/in/francoaballay" target="_blank" class="contact-action-btn">Conectar</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span class="contact-title">GitHub</span>
+                    <a href="https://github.com/francoaballay" target="_blank" class="contact-action-btn">Ver perfil</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span class="contact-title">Instagram</span>
+                    <a href="https://instagram.com/francoaballay" target="_blank" class="contact-action-btn">Seguir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Franco Luciano Aballay. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/francoaballay" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/francoaballay" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
