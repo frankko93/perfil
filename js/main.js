@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'contacto': 'Contacto'
             },
             'hero': {
-                'rol': 'Software Engineer',
+                'rol': 'Software Engineer / Consultor IT',
                 'resumen': 'Apasionado por crear soluciones con tecnología, siempre con un enfoque práctico y trabajando codo a codo con equipos diversos.',
                 'contactar': 'Contactar',
                 'verExperiencia': 'Ver experiencia'
@@ -215,8 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 'contacto': 'Contact'
             },
             'hero': {
-                'rol': 'Software Engineer',
-                'resumen': 'Passionate about creating solutions with technology, always with a practical approach and working hand in hand with diverse teams.',
+                'rol': 'Software Engineer / IT Consultant',
+                'resumen': 'Hello, I\'m a software developer with a passion for building clear, efficient, and sustainable solutions. I have experience working in dynamic teams, focusing on backend development and system integration. I enjoy solving complex problems with a practical, collaborative approach centered on the real value of the product.',
                 'contactar': 'Contact',
                 'verExperiencia': 'View experience'
             },
@@ -326,8 +326,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 'contacto': 'Contatto'
             },
             'hero': {
-                'rol': 'Ingegnere del Software',
-                'resumen': 'Appassionato di creare soluzioni con la tecnologia, sempre con un approccio pratico e lavorando fianco a fianco con team diversi.',
+                'rol': 'Ingegnere del Software / Consulente IT',
+                'resumen': 'Ciao, sono sviluppatore software con la passione per costruire soluzioni chiare, efficienti e sostenibili. Ho esperienza nel lavoro in team dinamici, focalizzato sullo sviluppo backend e l\'integrazione di sistemi. Mi piace risolvere problemi complessi con un approccio pratico, collaborativo e centrato sul valore reale del prodotto.',
                 'contactar': 'Contattare',
                 'verExperiencia': 'Visualizza esperienza'
             },
