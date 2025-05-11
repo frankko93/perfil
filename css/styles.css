@@ -1,17 +1,17 @@
 /* Variables globales - Nueva paleta de colores */
 :root {
-    --primary-color: #FFD700; /* Amarillo dorado */
-    --primary-hover: #FFC107; /* Amarillo más oscuro */
+    --primary-color: #4CAF50; /* Verde */
+    --primary-hover: #45a049; /* Verde más oscuro */
     --secondary-color: #808080; /* Gris */
     --secondary-hover: #666666; /* Gris más oscuro */
-    --dark-color: #121212; /* Negro casi puro */
-    --light-color: #1E1E1E; /* Negro más claro */
+    --dark-color: #050505; /* Negro más oscuro */
+    --light-color: #0A0A0A; /* Negro más claro */
     --text-color: #E0E0E0; /* Gris muy claro para texto */
     --background-color: #000000; /* Negro puro */
-    --gray-light: #333333; /* Gris oscuro */
-    --gray-medium: #666666; /* Gris medio */
-    --accent-color: #FFD700; /* Amarillo dorado */
-    --accent-hover: #FFC107; /* Amarillo más oscuro */
+    --gray-light: #0F0F0F; /* Gris más oscuro */
+    --gray-medium: #1A1A1A; /* Gris medio */
+    --accent-color: #4CAF50; /* Verde */
+    --accent-hover: #45a049; /* Verde más oscuro */
     --purple-light: #c4b5fd;
     --teal-light: #5eead4;
     --coral-light: #fda4af;
@@ -474,7 +474,7 @@ nav::before {
     align-items: center;
     gap: 0.8rem;
     margin-bottom: 1.2rem;
-    color: var(--gray-medium);
+    color: #B0B0B0; /* Gris más claro para mejor visibilidad */
     font-size: 1rem;
 }
 
@@ -980,6 +980,29 @@ nav::before {
     .hobby-item {
         flex: 0 0 calc(100% - 2rem);
         min-height: 250px;
+    }
+    
+    .hero-image img {
+        max-width: 80%;
+        margin-bottom: 1rem;
+        box-shadow: 
+            0 0 0 2px rgba(255, 215, 0, 0.1),
+            0 0 15px rgba(0, 0, 0, 0.2),
+            0 0 30px rgba(255, 215, 0, 0.1);
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
     }
 }
 
@@ -1528,10 +1551,10 @@ footer::after {
 /* Experiencia previa */
 .previous-experience {
     margin-top: 1.5rem;
-    background-color: var(--light-color);
+    background-color: #080808;
     border-radius: 10px;
     padding: 1.2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .previous-title {
@@ -1548,15 +1571,17 @@ footer::after {
 }
 
 .previous-job {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #0A0A0A;
     border-radius: 8px;
     padding: 1rem;
     transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .previous-job:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #0D0D0D;
 }
 
 .job-role {
