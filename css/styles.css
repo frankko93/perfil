@@ -1,7 +1,7 @@
 /* Variables globales - Nueva paleta de colores */
 :root {
-    --primary-color: #4CAF50; /* Verde */
-    --primary-hover: #45a049; /* Verde más oscuro */
+    --primary-color: #10B981; /* Verde esmeralda más vibrante */
+    --primary-hover: #059669; /* Verde esmeralda más oscuro */
     --secondary-color: #808080; /* Gris */
     --secondary-hover: #666666; /* Gris más oscuro */
     --dark-color: #050505; /* Negro más oscuro */
@@ -10,8 +10,8 @@
     --background-color: #000000; /* Negro puro */
     --gray-light: #0F0F0F; /* Gris más oscuro */
     --gray-medium: #1A1A1A; /* Gris medio */
-    --accent-color: #4CAF50; /* Verde */
-    --accent-hover: #45a049; /* Verde más oscuro */
+    --accent-color: #10B981; /* Verde esmeralda más vibrante */
+    --accent-hover: #059669; /* Verde esmeralda más oscuro */
     --purple-light: #c4b5fd;
     --teal-light: #5eead4;
     --coral-light: #fda4af;
@@ -702,12 +702,13 @@ nav::before {
 }
 
 .period {
-    color: var(--gray-medium);
+    color: var(--text-color);
     font-style: italic;
     padding: 4px 12px;
-    background-color: var(--gray-light);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .job-description p {
