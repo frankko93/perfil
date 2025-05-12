@@ -1,12 +1,15 @@
 // Esperar a que se cargue el DOM
 document.addEventListener('DOMContentLoaded', function() {
     // Visit counter functionality
+    let secretCode = '';
+    const correctCode = 'franco';
+    
     function updateVisitCounter() {
         let visits = localStorage.getItem('pageVisits') || 0;
         visits = parseInt(visits) + 1;
         localStorage.setItem('pageVisits', visits);
         
-        // Create or update counter element
+        // Create counter element but keep it hidden
         let counterElement = document.getElementById('visit-counter');
         if (!counterElement) {
             counterElement = document.createElement('div');
@@ -20,10 +23,27 @@ document.addEventListener('DOMContentLoaded', function() {
             counterElement.style.borderRadius = '20px';
             counterElement.style.fontSize = '14px';
             counterElement.style.zIndex = '1000';
+            counterElement.style.display = 'none'; // Hidden by default
             document.body.appendChild(counterElement);
         }
         counterElement.textContent = `Visitas: ${visits}`;
     }
+    
+    // Secret code listener
+    document.addEventListener('keypress', function(e) {
+        secretCode += e.key;
+        if (secretCode.length > correctCode.length) {
+            secretCode = secretCode.slice(-correctCode.length);
+        }
+        
+        if (secretCode === correctCode) {
+            const counterElement = document.getElementById('visit-counter');
+            if (counterElement) {
+                counterElement.style.display = counterElement.style.display === 'none' ? 'block' : 'none';
+            }
+            secretCode = ''; // Reset the code
+        }
+    });
     
     updateVisitCounter();
 
