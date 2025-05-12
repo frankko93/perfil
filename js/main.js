@@ -1,5 +1,32 @@
 // Esperar a que se cargue el DOM
 document.addEventListener('DOMContentLoaded', function() {
+    // Visit counter functionality
+    function updateVisitCounter() {
+        let visits = localStorage.getItem('pageVisits') || 0;
+        visits = parseInt(visits) + 1;
+        localStorage.setItem('pageVisits', visits);
+        
+        // Create or update counter element
+        let counterElement = document.getElementById('visit-counter');
+        if (!counterElement) {
+            counterElement = document.createElement('div');
+            counterElement.id = 'visit-counter';
+            counterElement.style.position = 'fixed';
+            counterElement.style.bottom = '20px';
+            counterElement.style.right = '20px';
+            counterElement.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            counterElement.style.color = '#10B981';
+            counterElement.style.padding = '10px 15px';
+            counterElement.style.borderRadius = '20px';
+            counterElement.style.fontSize = '14px';
+            counterElement.style.zIndex = '1000';
+            document.body.appendChild(counterElement);
+        }
+        counterElement.textContent = `Visitas: ${visits}`;
+    }
+    
+    updateVisitCounter();
+
     // Referencias a elementos del DOM
     const header = document.querySelector('header');
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
