@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             'sobreMi': {
                 'titulo': 'Sobre mí',
-                'parrafo1': 'Soy un ingeniero de software con experiencia en el desarrollo de aplicaciones web y móviles. Me apasiona crear soluciones tecnológicas que impacten positivamente en la vida de las personas.',
+                'parrafo1': 'Soy un ingeniero de software con mas de 10 años de experiencia en el diferentes compañias. Me apasiona crear soluciones tecnológicas que impacten positivamente en la vida de las personas.',
                 'parrafo2': 'A lo largo de mi carrera, he colaborado en equipos multidisciplinarios, lo que me ha permitido desarrollar habilidades de comunicación y trabajo en equipo, además de mis conocimientos técnicos.'
             },
             'experiencia': {
@@ -263,13 +263,13 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             'hero': {
                 'rol': 'Software Engineer / IT Consultant',
-                'resumen': 'Hello, I\'m a software developer with a passion for building clear, efficient, and sustainable solutions. I have experience working in dynamic teams, focusing on backend development and system integration. I enjoy solving complex problems with a practical, collaborative approach centered on the real value of the product.',
+                'resumen': 'Passionate about creating technology solutions, always with a practical approach and working side by side with diverse teams.',
                 'contactar': 'Contact',
                 'verExperiencia': 'View experience'
             },
             'sobreMi': {
                 'titulo': 'About me',
-                'parrafo1': 'I am a software engineer with experience in web and mobile application development. I am passionate about creating technological solutions that positively impact people\'s lives.',
+                'parrafo1': 'I am a software engineer with more than 10 years of experience in different companies. I am passionate about creating technological solutions that positively impact people\'s lives.',
                 'parrafo2': 'Throughout my career, I have collaborated in multidisciplinary teams, which has allowed me to develop communication and teamwork skills, in addition to my technical knowledge.'
             },
             'experiencia': {
@@ -374,13 +374,13 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             'hero': {
                 'rol': 'Ingegnere del Software / Consulente IT',
-                'resumen': 'Ciao, sono sviluppatore software con la passione per costruire soluzioni chiare, efficienti e sostenibili. Ho esperienza nel lavoro in team dinamici, focalizzato sullo sviluppo backend e l\'integrazione di sistemi. Mi piace risolvere problemi complessi con un approccio pratico, collaborativo e centrato sul valore reale del prodotto.',
+                'resumen': 'Appassionato di creare soluzioni con la tecnologia, sempre con un approccio pratico e lavorando fianco a fianco con team diversi.',
                 'contactar': 'Contattare',
                 'verExperiencia': 'Visualizza esperienza'
             },
             'sobreMi': {
                 'titulo': 'Su di me',
-                'parrafo1': 'Sono un ingegnere del software con esperienza nello sviluppo di applicazioni web e mobili. Sono appassionato di creare soluzioni tecnologiche che impattino positivamente la vita delle persone.',
+                'parrafo1': 'Sono un ingegnere del software con più di 10 anni di esperienza in diverse aziende. Sono appassionato di creare soluzioni tecnologiche che impattino positivamente la vita delle persone.',
                 'parrafo2': 'Durante la mia carriera, ho collaborato in team multidisciplinari, che mi ha permesso di sviluppare capacità di comunicazione e lavoro di squadra, oltre alle mie conoscenze tecniche.'
             },
             'experiencia': {
