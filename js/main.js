@@ -151,15 +151,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 'contacto': 'Contacto'
             },
             'hero': {
-                'rol': 'Software Engineer / Consultor IT',
-                'resumen': 'Apasionado por crear soluciones con tecnología, siempre con un enfoque práctico y trabajando codo a codo con equipos diversos.',
+                'rol': 'Software Engineer | Consultor IT',
+                'tagline': 'Creando el futuro, una línea de código a la vez',
+                'resumen': 'Me encanta resolver problemas complejos y convertir ideas en realidad digital. Con más de 10 años ayudando a empresas como Mercado Libre y startups fintech, disfruto cada día construyendo tecnología que mejora la vida de las personas.',
                 'contactar': 'Contactar',
                 'verExperiencia': 'Ver experiencia'
             },
             'sobreMi': {
-                'titulo': 'Sobre mí',
-                'parrafo1': 'Soy un ingeniero de software con mas de 10 años de experiencia en el diferentes compañias. Me apasiona crear soluciones tecnológicas que impacten positivamente en la vida de las personas.',
-                'parrafo2': 'A lo largo de mi carrera, he colaborado en equipos multidisciplinarios, lo que me ha permitido desarrollar habilidades de comunicación y trabajo en equipo, además de mis conocimientos técnicos.'
+                'titulo': 'Un poco más sobre mí',
+                'parrafo1': 'Soy de esas personas que ve un problema y piensa "¿cómo podemos hacer esto mejor?". He tenido la suerte de trabajar en proyectos increíbles, desde sistemas de pagos que usan millones de personas hasta plataformas que conectan comerciantes con sus sueños.',
+                'parrafo2': 'Lo que más me motiva es trabajar en equipo, compartir conocimiento y ver cómo nuestras ideas cobran vida. Cuando no estoy programando, probablemente esté aprendiendo algo nuevo, haciendo deporte o planeando mi próxima aventura de buceo.'
             },
             'experiencia': {
                 'titulo': 'Experiencia Laboral',
@@ -169,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'periodo': '2022 - Actualidad',
                     'descripcion': 'Desarrollo de soluciones fintech para procesamiento de pagos y servicios financieros, con enfoque principal en backend pero también contribuyendo al frontend. Implementación de APIs RESTful y arquitecturas escalables.',
                     'logros': [
-                        'Desarrollo de microservicios con Node.js, TypeScript, Java y Golang (Algunos con distintos framerworks)',
+                        'Desarrollo de microservicios con Node.js, TypeScript, Java, kotlin y Golang (Algunos con distintos framerworks)',
                         'Implementación de distintas arquitecturas y servicios en AWS',
                         'Integración con APIs de distintos proveedores (Governamentales, de Pagos, Regulatorios, etc)',
                         'Optimización de rendimiento y seguridad de APIs'
@@ -181,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'periodo': '2019 - 2022',
                     'descripcion': 'Desarrollo fullstack para la plataforma de comercio y pagos electrónicos, implementando tanto servicios frontend como backend e interfaces de usuario, trabajando en equipos ágiles y contribuyendo a la mejora continua.',
                     'logros': [
-                        'Implementación de APIs escalables con NodeJS, Goland, Java y Spring Boot',
+                        'Implementación de APIs escalables con NodeJS, Goland, Java, kotlin y Spring Boot',
                         'Desarrollo de frontends con React y tecnologías afines',
                         'Integración con bases de datos NoSQL y relacionales',
                         'Implementación de patrones de diseño para microservicios'
@@ -262,15 +263,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 'contacto': 'Contact'
             },
             'hero': {
-                'rol': 'Software Engineer / IT Consultant',
-                'resumen': 'Passionate about creating technology solutions, always with a practical approach and working side by side with diverse teams.',
+                'rol': 'Software Engineer | IT Consultant',
+                'tagline': 'Building the future, one line of code at a time',
+                'resumen': 'I love solving complex problems and turning ideas into digital reality. With over 10 years helping companies like Mercado Libre and fintech startups, I enjoy every day building technology that improves people\'s lives.',
                 'contactar': 'Contact',
                 'verExperiencia': 'View experience'
             },
             'sobreMi': {
-                'titulo': 'About me',
-                'parrafo1': 'I am a software engineer with more than 10 years of experience in different companies. I am passionate about creating technological solutions that positively impact people\'s lives.',
-                'parrafo2': 'Throughout my career, I have collaborated in multidisciplinary teams, which has allowed me to develop communication and teamwork skills, in addition to my technical knowledge.'
+                'titulo': 'A bit more about me',
+                'parrafo1': 'I\'m one of those people who sees a problem and thinks "how can we make this better?". I\'ve been lucky to work on incredible projects, from payment systems used by millions to platforms that connect merchants with their dreams.',
+                'parrafo2': 'What motivates me most is working as a team, sharing knowledge, and seeing our ideas come to life. When I\'m not coding, I\'m probably learning something new, doing sports, or planning my next diving adventure.'
             },
             'experiencia': {
                 'titulo': 'Work Experience',
@@ -280,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'periodo': '2022 - Present',
                     'descripcion': 'Development of fintech solutions for payment processing and financial services, with primary focus on backend but also contributing to frontend. Implementation of RESTful APIs and scalable architectures.',
                     'logros': [
-                        'Development of microservices with Node.js, TypeScript, Java and Golang (Some with different frameworks)',
+                        'Development of microservices with Node.js, TypeScript, Java, kotlin and Golang (Some with different frameworks)',
                         'Implementation of various architectures and services in AWS',
                         'Integration with APIs from different providers (Government, Payment, Regulatory, etc)',
                         'Optimization of API performance and security'
@@ -292,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'periodo': '2019 - 2022',
                     'descripcion': 'Fullstack development for the e-commerce and electronic payments platform, implementing both frontend and backend services and user interfaces, working in agile teams and contributing to continuous improvement.',
                     'logros': [
-                        'Implementation of scalable APIs with NodeJS, Goland, Java and Spring Boot',
+                        'Implementation of scalable APIs with NodeJS, Goland, Java, kotlin and Spring Boot',
                         'Frontend development with React and related technologies',
                         'Integration with NoSQL and relational databases',
                         'Implementation of design patterns for microservices'
@@ -373,15 +375,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 'contacto': 'Contatto'
             },
             'hero': {
-                'rol': 'Ingegnere del Software / Consulente IT',
-                'resumen': 'Appassionato di creare soluzioni con la tecnologia, sempre con un approccio pratico e lavorando fianco a fianco con team diversi.',
+                'rol': 'Software Engineer | Consulente IT',
+                'tagline': 'Costruendo il futuro, una riga di codice alla volta',
+                'resumen': 'Adoro risolvere problemi complessi e trasformare idee in realtà digitale. Con oltre 10 anni aiutando aziende come Mercado Libre e startup fintech, mi diverto ogni giorno costruendo tecnologia che migliora la vita delle persone.',
                 'contactar': 'Contattare',
                 'verExperiencia': 'Visualizza esperienza'
             },
             'sobreMi': {
-                'titulo': 'Su di me',
-                'parrafo1': 'Sono un ingegnere del software con più di 10 anni di esperienza in diverse aziende. Sono appassionato di creare soluzioni tecnologiche che impattino positivamente la vita delle persone.',
-                'parrafo2': 'Durante la mia carriera, ho collaborato in team multidisciplinari, che mi ha permesso di sviluppare capacità di comunicazione e lavoro di squadra, oltre alle mie conoscenze tecniche.'
+                'titulo': 'Un po\' di più su di me',
+                'parrafo1': 'Sono una di quelle persone che vede un problema e pensa "come possiamo migliorare questo?". Ho avuto la fortuna di lavorare su progetti incredibili, dai sistemi di pagamento usati da milioni di persone alle piattaforme che collegano i commercianti ai loro sogni.',
+                'parrafo2': 'Quello che mi motiva di più è lavorare in squadra, condividere conoscenze e vedere le nostre idee prendere vita. Quando non sto programmando, probabilmente sto imparando qualcosa di nuovo, facendo sport o pianificando la mia prossima avventura subacquea.'
             },
             'experiencia': {
                 'titulo': 'Esperienza lavorativa',
@@ -391,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'periodo': '2022 - Attuale',
                     'descripcion': 'Sviluppo di soluzioni fintech per l\'elaborazione dei pagamenti e servizi finanziari, con focus principale sul backend ma contribuendo anche al frontend. Implementazione di API RESTful e architetture scalabili.',
                     'logros': [
-                        'Sviluppo di microservizi con Node.js, TypeScript, Java e Golang (Alcuni con diversi framework)',
+                        'Sviluppo di microservizi con Node.js, TypeScript, Java, kotlin e Golang (Alcuni con diversi framework)',
                         'Implementazione di diverse architetture e servizi in AWS',
                         'Integrazione con API di diversi fornitori (Governativi, di Pagamento, Regolatori, ecc)',
                         'Ottimizzazione delle prestazioni e della sicurezza delle API'
@@ -403,7 +406,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'periodo': '2019 - 2022',
                     'descripcion': 'Sviluppo fullstack per la piattaforma di commercio elettronico e pagamenti, implementando sia servizi frontend che backend e interfacce utente, lavorando in team agili e contribuendo al miglioramento continuo.',
                     'logros': [
-                        'Implementazione di API scalabili con NodeJS, Goland, Java e Spring Boot',
+                        'Implementazione di API scalabili con NodeJS, Goland, Java, kotlin e Spring Boot',
                         'Sviluppo di frontend con React e tecnologie correlate',
                         'Integrazione con database NoSQL e relazionali',
                         'Implementazione di pattern di design per microservizi'
@@ -533,12 +536,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Traducir hero section
         document.querySelector('.hero-text h2').textContent = translations[lang].hero.rol;
+        document.querySelector('.hero-text h3').textContent = translations[lang].hero.tagline;
         document.querySelector('.hero-text .summary').textContent = translations[lang].hero.resumen;
         document.querySelector('.hero-buttons .primary').textContent = translations[lang].hero.contactar;
         document.querySelector('.hero-buttons .secondary').textContent = translations[lang].hero.verExperiencia;
         
         // Traducir sección sobre mí (ahora integrada en el hero)
-        document.querySelector('.about-me-tag span').textContent = translations[lang].sobreMi.titulo;
+        document.querySelector('.about-me-header h4').textContent = translations[lang].sobreMi.titulo;
         const profileParagraphs = document.querySelectorAll('.profile-details p');
         if (profileParagraphs.length >= 2) {
             profileParagraphs[0].textContent = translations[lang].sobreMi.parrafo1;
