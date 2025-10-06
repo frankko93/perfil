@@ -140,37 +140,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Language system with optional external JSON loading
-    let translations = null;
-    
-    // Function to load translations from external JSON file (optional)
-    async function loadTranslationsFromJSON() {
-        try {
-            const response = await fetch('./translations.json');
-            if (response.ok) {
-                const data = await response.json();
-                console.log('Translations loaded from external JSON file');
-                return data;
-            }
-        } catch (error) {
-            console.log('Could not load external translations, using embedded ones');
-        }
-        return null;
-    }
-    
-    // Initialize translations (try external first, fallback to embedded)
-    async function initializeTranslations() {
-        const externalTranslations = await loadTranslationsFromJSON();
-        
-        if (externalTranslations) {
-            translations = externalTranslations;
-        } else {
-            // Fallback to embedded translations
-            translations = {
+    // Language system with embedded translations
+    const translations = {
         'es': {
             'nav': {
                 'sobreMi': 'Sobre mí',
                 'experiencia': 'Experiencia',
+                'proyectos': 'Proyectos',
                 'tecnologias': 'Tecnologías',
                 'pasatiempos': 'Pasatiempos',
                 'contacto': 'Contacto'
@@ -180,12 +156,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 'tagline': 'Creando el futuro, una línea de código a la vez',
                 'resumen': 'Me encanta resolver problemas complejos y convertir ideas en realidad digital. Con más de 10 años ayudando a empresas como Mercado Libre y startups fintech, disfruto cada día construyendo tecnología que mejora la vida de las personas.',
                 'contactar': 'Contactar',
-                'verExperiencia': 'Ver experiencia'
+                'verExperiencia': 'Ver experiencia',
+                'stats': {
+                    'anos': 'Años de experiencia',
+                    'proyectos': 'Proyectos completados',
+                    'tecnologias': 'Tecnologías dominadas'
+                }
             },
             'sobreMi': {
                 'titulo': 'Un poco más sobre mí',
                 'parrafo1': 'Soy de esas personas que ve un problema y piensa "¿cómo podemos hacer esto mejor?". He tenido la suerte de trabajar en proyectos increíbles, desde sistemas de pagos que usan millones de personas hasta plataformas que conectan comerciantes con sus sueños.',
-                'parrafo2': 'Lo que más me motiva es trabajar en equipo, compartir conocimiento y ver cómo nuestras ideas cobran vida. Cuando no estoy programando, probablemente esté aprendiendo algo nuevo, haciendo deporte o planeando mi próxima aventura de buceo.'
+                'parrafo2': 'Lo que más me motiva es trabajar en equipo, compartir conocimiento y ver cómo nuestras ideas cobran vida. Cuando no estoy programando, probablemente esté aprendiendo algo nuevo, haciendo deporte o planeando mi próxima aventura de buceo.',
+                'fortalezas': 'Fortalezas principales',
+                'skill1': 'Resolución de problemas complejos',
+                'skill2': 'Arquitectura de sistemas escalables',
+                'skill3': 'Liderazgo técnico y mentoring',
+                'skill4': 'Integración de APIs y microservicios'
             },
             'experiencia': {
                 'titulo': 'Experiencia Laboral',
@@ -214,6 +200,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 }
             },
+            'proyectos': {
+                'titulo': 'Proyectos seleccionados',
+                'proyecto1': {
+                    'titulo': 'Growth360',
+                    'descripcion': 'Ecosistema estratégico integral para escalar negocios a 6/7 cifras'
+                },
+                'proyecto2': {
+                    'titulo': 'Luluat',
+                    'descripcion': 'Landing premium para marca de joyería de plata 925 artesanal'
+                },
+                'proyecto3': {
+                    'titulo': 'DeaPadel',
+                    'descripcion': 'Web multiidioma para centro de pádel profesional en Sicilia'
+                },
+                'proyecto4': {
+                    'titulo': 'Estilo Apple',
+                    'descripcion': 'Landing de alto impacto para reparaciones premium de iPhone'
+                },
+                'proyecto5': {
+                    'titulo': 'Ivan Design',
+                    'descripcion': 'Landing artística para diseño personalizado de cascos de carreras'
+                }
+            },
             'tecnologias': {
                 'titulo': 'Tecnologías',
                 'categorias': {
@@ -223,6 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'items': {
                     'golang': 'Go (Golang)',
                     'java': 'Java',
+                    'kotlin': 'Kotlin',
                     'typescript': 'TypeScript',
                     'js': 'JavaScript',
                     'html': 'HTML / CSS',
@@ -283,6 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'nav': {
                 'sobreMi': 'About me',
                 'experiencia': 'Experience',
+                'proyectos': 'Projects',
                 'tecnologias': 'Technologies',
                 'pasatiempos': 'Hobbies',
                 'contacto': 'Contact'
@@ -292,12 +303,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 'tagline': 'Building the future, one line of code at a time',
                 'resumen': 'I love solving complex problems and turning ideas into digital reality. With over 10 years helping companies like Mercado Libre and fintech startups, I enjoy every day building technology that improves people\'s lives.',
                 'contactar': 'Contact',
-                'verExperiencia': 'View experience'
+                'verExperiencia': 'View experience',
+                'stats': {
+                    'anos': 'Years of experience',
+                    'proyectos': 'Completed projects',
+                    'tecnologias': 'Mastered technologies'
+                }
             },
             'sobreMi': {
                 'titulo': 'A bit more about me',
                 'parrafo1': 'I\'m one of those people who sees a problem and thinks "how can we make this better?". I\'ve been lucky to work on incredible projects, from payment systems used by millions to platforms that connect merchants with their dreams.',
-                'parrafo2': 'What motivates me most is working as a team, sharing knowledge, and seeing our ideas come to life. When I\'m not coding, I\'m probably learning something new, doing sports, or planning my next diving adventure.'
+                'parrafo2': 'What motivates me most is working as a team, sharing knowledge, and seeing our ideas come to life. When I\'m not coding, I\'m probably learning something new, doing sports, or planning my next diving adventure.',
+                'fortalezas': 'Core strengths',
+                'skill1': 'Complex problem solving',
+                'skill2': 'Scalable systems architecture',
+                'skill3': 'Technical leadership and mentoring',
+                'skill4': 'API integration and microservices'
             },
             'experiencia': {
                 'titulo': 'Work Experience',
@@ -326,6 +347,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 }
             },
+            'proyectos': {
+                'titulo': 'Selected projects',
+                'proyecto1': {
+                    'titulo': 'Growth360',
+                    'descripcion': 'Comprehensive strategic ecosystem to scale businesses to 6/7 figures'
+                },
+                'proyecto2': {
+                    'titulo': 'Luluat',
+                    'descripcion': 'Premium landing page for artisanal 925 silver jewelry brand'
+                },
+                'proyecto3': {
+                    'titulo': 'DeaPadel',
+                    'descripcion': 'Multilingual website for professional padel center in Sicily'
+                },
+                'proyecto4': {
+                    'titulo': 'Estilo Apple',
+                    'descripcion': 'High-impact landing page for premium iPhone repairs'
+                },
+                'proyecto5': {
+                    'titulo': 'Ivan Design',
+                    'descripcion': 'Artistic landing page for custom racing helmet design'
+                }
+            },
             'tecnologias': {
                 'titulo': 'Technologies',
                 'categorias': {
@@ -335,6 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'items': {
                     'golang': 'Go (Golang)',
                     'java': 'Java',
+                    'kotlin': 'Kotlin',
                     'typescript': 'TypeScript',
                     'js': 'JavaScript',
                     'html': 'HTML / CSS',
@@ -395,6 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'nav': {
                 'sobreMi': 'Su di me',
                 'experiencia': 'Esperienza',
+                'proyectos': 'Progetti',
                 'tecnologias': 'Tecnologie',
                 'pasatiempos': 'Hobby',
                 'contacto': 'Contatto'
@@ -404,12 +450,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 'tagline': 'Costruendo il futuro, una riga di codice alla volta',
                 'resumen': 'Adoro risolvere problemi complessi e trasformare idee in realtà digitale. Con oltre 10 anni aiutando aziende come Mercado Libre e startup fintech, mi diverto ogni giorno costruendo tecnologia che migliora la vita delle persone.',
                 'contactar': 'Contattare',
-                'verExperiencia': 'Visualizza esperienza'
+                'verExperiencia': 'Visualizza esperienza',
+                'stats': {
+                    'anos': 'Anni di esperienza',
+                    'proyectos': 'Progetti completati',
+                    'tecnologias': 'Tecnologie padroneggiate'
+                }
             },
             'sobreMi': {
                 'titulo': 'Un po\' di più su di me',
                 'parrafo1': 'Sono una di quelle persone che vede un problema e pensa "come possiamo migliorare questo?". Ho avuto la fortuna di lavorare su progetti incredibili, dai sistemi di pagamento usati da milioni di persone alle piattaforme che collegano i commercianti ai loro sogni.',
-                'parrafo2': 'Quello che mi motiva di più è lavorare in squadra, condividere conoscenze e vedere le nostre idee prendere vita. Quando non sto programmando, probabilmente sto imparando qualcosa di nuovo, facendo sport o pianificando la mia prossima avventura subacquea.'
+                'parrafo2': 'Quello che mi motiva di più è lavorare in squadra, condividere conoscenze e vedere le nostre idee prendere vita. Quando non sto programmando, probabilmente sto imparando qualcosa di nuovo, facendo sport o pianificando la mia prossima avventura subacquea.',
+                'fortalezas': 'Punti di forza principali',
+                'skill1': 'Risoluzione di problemi complessi',
+                'skill2': 'Architettura di sistemi scalabili',
+                'skill3': 'Leadership tecnica e mentoring',
+                'skill4': 'Integrazione di API e microservizi'
             },
             'experiencia': {
                 'titulo': 'Esperienza lavorativa',
@@ -438,6 +494,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 }
             },
+            'proyectos': {
+                'titulo': 'Progetti selezionati',
+                'proyecto1': {
+                    'titulo': 'Growth360',
+                    'descripcion': 'Ecosistema strategico completo per scalare attività a 6/7 cifre'
+                },
+                'proyecto2': {
+                    'titulo': 'Luluat',
+                    'descripcion': 'Landing premium per marchio di gioielli in argento 925 artigianale'
+                },
+                'proyecto3': {
+                    'titulo': 'DeaPadel',
+                    'descripcion': 'Sito multilingua per centro padel professionale in Sicilia'
+                },
+                'proyecto4': {
+                    'titulo': 'Estilo Apple',
+                    'descripcion': 'Landing ad alto impatto per riparazioni iPhone premium'
+                },
+                'proyecto5': {
+                    'titulo': 'Ivan Design',
+                    'descripcion': 'Landing artistica per design personalizzato di caschi da corsa'
+                }
+            },
             'tecnologias': {
                 'titulo': 'Tecnologie',
                 'categorias': {
@@ -447,6 +526,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'items': {
                     'golang': 'Go (Golang)',
                     'java': 'Java',
+                    'kotlin': 'Kotlin',
                     'typescript': 'TypeScript',
                     'js': 'JavaScript',
                     'html': 'HTML / CSS',
@@ -502,23 +582,14 @@ document.addEventListener('DOMContentLoaded', function() {
             'footer': {
                 'derechos': '© 2023 Franco Luciano Aballay. Tutti i diritti riservati.'
             }
-            }
         }
-    }
+    };
     
-    // Initialize the application
-    async function initializeApp() {
-        await initializeTranslations();
-        
-        // Check for saved language preference
-        const savedLanguage = localStorage.getItem('preferredLanguage');
-        if (savedLanguage && translations[savedLanguage]) {
-            changeLanguage(savedLanguage);
-        }
+    // Check for saved language preference and apply it
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage && translations[savedLanguage]) {
+        changeLanguage(savedLanguage);
     }
-    
-    // Call initialization
-    initializeApp();
     
     // Función para aplicar traducciones usando atributos data-i18n
     function applyTranslations(lang) {
