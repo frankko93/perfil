@@ -661,6 +661,198 @@ nav {
     font-size: 1.1rem;
 }
 
+/* Projects Section - Grid Pattern 4-3-4 */
+.projects {
+    padding: 100px 0;
+    background: var(--background-color);
+    position: relative;
+}
+
+.projects .section-title {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.projects .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Dynamic grid that adapts to content */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Remove all specific positioning - let it be dynamic */
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary-color);
+    border-radius: 50px; /* Oval shape */
+    padding: 2rem 2.5rem;
+    min-height: 120px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 48px;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+}
+
+.project-content {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.project-content h3 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.project-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.project-overlay {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.project-overlay i {
+    color: #3b82f6;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-overlay i {
+    color: #60a5fa;
+    transform: scale(1.1);
+}
+
+/* Responsive design for projects */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 80px 0;
+    }
+    
+    .projects .section-title {
+        font-size: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem 2rem;
+        min-height: 100px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .project-content {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .project-content p {
+        font-size: 0.85rem;
+    }
+    
+    .project-overlay {
+        opacity: 1;
+        transform: translateX(0);
+        align-self: flex-end;
+    }
+    
+    /* Mobile tap behavior */
+    .project-card:active {
+        transform: translateY(-2px) scale(1.01);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        padding: 1.2rem 1.5rem;
+        border-radius: 40px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-content p {
+        font-size: 0.8rem;
+    }
+}
+
 /* Tecnologías mejoradas */
 .technologies {
     position: relative;

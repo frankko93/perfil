@@ -28,11 +28,12 @@
             <nav>
                 <div class="logo">Franco Aballay</div>
                 <div class="nav-links">
-                    <a href="#hero">Sobre mí</a>
-                    <a href="#experiencia">Experiencia</a>
-                    <a href="#tecnologias">Tecnologías</a>
-                    <a href="#pasatiempos">Pasatiempos</a>
-                    <a href="#contacto">Contacto</a>
+                    <a href="#hero" data-i18n="nav.sobreMi">Sobre mí</a>
+                    <a href="#experiencia" data-i18n="nav.experiencia">Experiencia</a>
+                    <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+                    <a href="#tecnologias" data-i18n="nav.tecnologias">Tecnologías</a>
+                    <a href="#pasatiempos" data-i18n="nav.pasatiempos">Pasatiempos</a>
+                    <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
                 </div>
                 <div class="language-selector">
                     <button class="active" data-lang="es">ES</button>
@@ -53,21 +54,21 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Franco Aballay</h1>
-                    <h2>Software Engineer | Consultor IT</h2>
-                    <h3>Creando el futuro, una línea de código a la vez</h3>
+                    <h2 data-i18n="hero.rol">Software Engineer | Consultor IT</h2>
+                    <h3 data-i18n="hero.tagline">Creando el futuro, una línea de código a la vez</h3>
                     <p class="location"><i class="fas fa-map-marker-alt"></i> Catania, Sicilia, Italia</p>
-                    <p class="summary">Me encanta resolver problemas complejos y convertir ideas en realidad digital. Con más de 10 años ayudando a empresas como Mercado Libre y startups fintech, disfruto cada día construyendo tecnología que mejora la vida de las personas.</p>
+                    <p class="summary" data-i18n="hero.resumen">Me encanta resolver problemas complejos y convertir ideas en realidad digital. Con más de 10 años ayudando a empresas como Mercado Libre y startups fintech, disfruto cada día construyendo tecnología que mejora la vida de las personas.</p>
                     <div class="profile-details">
                         <div class="about-me-header" id="sobre-mi">
-                            <h4>Un poco más sobre mí</h4>
+                            <h4 data-i18n="sobreMi.titulo">Un poco más sobre mí</h4>
                             <div class="about-me-line"></div>
                         </div>
-                        <p>Soy de esas personas que ve un problema y piensa "¿cómo podemos hacer esto mejor?". He tenido la suerte de trabajar en proyectos increíbles, desde sistemas de pagos que usan millones de personas hasta plataformas que conectan comerciantes con sus sueños.</p>
-                        <p>Lo que más me motiva es trabajar en equipo, compartir conocimiento y ver cómo nuestras ideas cobran vida. Cuando no estoy programando, probablemente esté aprendiendo algo nuevo, haciendo deporte o planeando mi próxima aventura de buceo.</p>
+                        <p data-i18n="sobreMi.parrafo1">Soy de esas personas que ve un problema y piensa "¿cómo podemos hacer esto mejor?". He tenido la suerte de trabajar en proyectos increíbles, desde sistemas de pagos que usan millones de personas hasta plataformas que conectan comerciantes con sus sueños.</p>
+                        <p data-i18n="sobreMi.parrafo2">Lo que más me motiva es trabajar en equipo, compartir conocimiento y ver cómo nuestras ideas cobran vida. Cuando no estoy programando, probablemente esté aprendiendo algo nuevo, haciendo deporte o planeando mi próxima aventura de buceo.</p>
                     </div>
                     <div class="hero-buttons">
-                        <a href="#contacto" class="btn primary">Contactar</a>
-                        <a href="#experiencia" class="btn secondary">Ver experiencia</a>
+                        <a href="#contacto" class="btn primary" data-i18n="hero.contactar">Contactar</a>
+                        <a href="#experiencia" class="btn secondary" data-i18n="hero.verExperiencia">Ver experiencia</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -141,6 +142,69 @@
                         <p class="job-brief">Provincia de San Juan, Argentina</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-i18n="proyectos.titulo">Proyectos seleccionados</h2>
+            
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                    <a href="https://growth360.com.ar/" class="project-card" target="_blank">
+                        <div class="project-content">
+                            <h3 data-i18n="proyectos.proyecto1.titulo">Growth360</h3>
+                            <p data-i18n="proyectos.proyecto1.descripcion">Ecosistema estratégico integral para escalar negocios a 6/7 cifras</p>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+
+                <!-- Proyecto 2 -->
+                    <a href="https://luluat.com.ar/" class="project-card" target="_blank">
+                        <div class="project-content">
+                            <h3 data-i18n="proyectos.proyecto2.titulo">Luluat</h3>
+                            <p data-i18n="proyectos.proyecto2.descripcion">Landing premium para marca de joyería de plata 925 artesanal</p>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+
+                <!-- Proyecto 3 -->
+                    <a href="https://deapadel.it/" class="project-card" target="_blank">
+                        <div class="project-content">
+                            <h3 data-i18n="proyectos.proyecto3.titulo">DeaPadel</h3>
+                            <p data-i18n="proyectos.proyecto3.descripcion">Web multiidioma para centro de pádel profesional en Sicilia</p>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+
+                <!-- Proyecto 4 -->
+                    <a href="https://estiloapple.com.ar/el-secreto-de-apple/" class="project-card" target="_blank">
+                        <div class="project-content">
+                            <h3 data-i18n="proyectos.proyecto4.titulo">Estilo Apple</h3>
+                            <p data-i18n="proyectos.proyecto4.descripcion">Landing de alto impacto para reparaciones premium de iPhone</p>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+
+                <!-- Proyecto 5 -->
+                    <a href="https://ivan-design.com.ar/" class="project-card" target="_blank">
+                        <div class="project-content">
+                            <h3 data-i18n="proyectos.proyecto5.titulo">Ivan Design</h3>
+                            <p data-i18n="proyectos.proyecto5.descripcion">Landing artística para diseño personalizado de cascos de carreras</p>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
             </div>
         </div>
     </section>
@@ -237,71 +301,71 @@
 
     <section id="pasatiempos" class="hobbies">
         <div class="container">
-            <h2 class="section-title">Pasatiempos</h2>
-            <div class="hobbies-content">
-                <div class="hobby-item">
-                    <i class="fas fa-running"></i>
-                    <h3>Deportes</h3>
-                    <p>Me gusta mantenerme activo. Juego pádel y fútbol varias veces por semana, voy al gimnasio con regularidad y disfruto todo lo que implique movimiento y energía.</p>
-                </div>
-                <div class="hobby-item">
-                    <i class="fas fa-water"></i>
-                    <h3>Buceo</h3>
-                    <p>Soy buzo certificado y me fascina explorar el mundo submarino. Es una forma única de conectar con la naturaleza desde otra perspectiva.</p>
-                </div>
-                <div class="hobby-item">
-                    <i class="fas fa-camera"></i>
-                    <h3>Fotografía</h3>
-                    <p>La fotografía es una forma de capturar momentos, lugares y detalles que me inspiran. Es un hobby que combina creatividad con observación.</p>
-                </div>
-                <div class="hobby-item">
-                    <i class="fas fa-plane"></i>
-                    <h3>Viajar y descubrir</h3>
-                    <p>Me encanta conocer nuevos lugares, culturas y comidas. Siempre busco experiencias auténticas, cerca del mar si es posible.</p>
-                </div>
-                <div class="hobby-item">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Tecnología y aprendizaje continuo</h3>
-                    <p>Siempre estoy explorando nuevas herramientas, aprendiendo sobre inteligencia artificial o metido en algún proyecto personal para seguir creciendo.</p>
-                </div>
+            <h2 class="section-title" data-i18n="pasatiempos.titulo">Pasatiempos</h2>
+        <div class="hobbies-content">
+            <div class="hobby-item">
+                <i class="fas fa-running"></i>
+                <h3 data-i18n="pasatiempos.deportes.titulo">Deportes</h3>
+                <p data-i18n="pasatiempos.deportes.descripcion">Me gusta mantenerme activo. Juego pádel y fútbol varias veces por semana, voy al gimnasio con regularidad y disfruto todo lo que implique movimiento y energía.</p>
             </div>
+            <div class="hobby-item">
+                <i class="fas fa-water"></i>
+                <h3 data-i18n="pasatiempos.buceo.titulo">Buceo</h3>
+                <p data-i18n="pasatiempos.buceo.descripcion">Soy buzo certificado y me fascina explorar el mundo submarino. Es una forma única de conectar con la naturaleza desde otra perspectiva.</p>
+            </div>
+            <div class="hobby-item">
+                <i class="fas fa-camera"></i>
+                <h3 data-i18n="pasatiempos.fotografia.titulo">Fotografía</h3>
+                <p data-i18n="pasatiempos.fotografia.descripcion">La fotografía es una forma de capturar momentos, lugares y detalles que me inspiran. Es un hobby que combina creatividad con observación.</p>
+            </div>
+            <div class="hobby-item">
+                <i class="fas fa-plane"></i>
+                <h3 data-i18n="pasatiempos.viajar.titulo">Viajar y descubrir</h3>
+                <p data-i18n="pasatiempos.viajar.descripcion">Me encanta conocer nuevos lugares, culturas y comidas. Siempre busco experiencias auténticas, cerca del mar si es posible.</p>
+            </div>
+            <div class="hobby-item">
+                <i class="fas fa-laptop-code"></i>
+                <h3 data-i18n="pasatiempos.tecnologia.titulo">Tecnología y aprendizaje continuo</h3>
+                <p data-i18n="pasatiempos.tecnologia.descripcion">Siempre estoy explorando nuevas herramientas, aprendiendo sobre inteligencia artificial o metido en algún proyecto personal para seguir creciendo.</p>
+            </div>
+        </div>
         </div>
     </section>
 
     <section id="contacto" class="contact">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
+            <h2 class="section-title" data-i18n="contacto.titulo">Contacto</h2>
             <div class="contact-links">
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <span class="contact-title">E-mail</span>
-                    <a href="mailto:frankko93@gmail.com" class="contact-action-btn">Enviar correo</a>
+                    <span class="contact-title" data-i18n="contacto.correo">E-mail</span>
+                    <a href="mailto:frankko93@gmail.com" class="contact-action-btn" data-i18n="contacto.acciones.correo">Enviar correo</a>
                 </div>
                 
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fab fa-linkedin-in"></i>
                     </div>
-                    <span class="contact-title">LinkedIn</span>
-                    <a href="https://www.linkedin.com/in/franco-luciano-aballay/" target="_blank" class="contact-action-btn">Conectar</a>
+                    <span class="contact-title" data-i18n="contacto.linkedin">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/franco-luciano-aballay/" target="_blank" class="contact-action-btn" data-i18n="contacto.acciones.linkedin">Conectar</a>
                 </div>
                 
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fab fa-github"></i>
                     </div>
-                    <span class="contact-title">GitHub</span>
-                    <a href="https://github.com/frankko93/" target="_blank" class="contact-action-btn">Ver perfil</a>
+                    <span class="contact-title" data-i18n="contacto.github">GitHub</span>
+                    <a href="https://github.com/frankko93/" target="_blank" class="contact-action-btn" data-i18n="contacto.acciones.github">Ver perfil</a>
                 </div>
                 
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fab fa-instagram"></i>
                     </div>
-                    <span class="contact-title">Instagram</span>
-                    <a href="https://www.instagram.com/_francoaballay/" target="_blank" class="contact-action-btn">Seguir</a>
+                    <span class="contact-title" data-i18n="contacto.instagram">Instagram</span>
+                    <a href="https://www.instagram.com/_francoaballay/" target="_blank" class="contact-action-btn" data-i18n="contacto.acciones.instagram">Seguir</a>
                 </div>
             </div>
         </div>
@@ -310,7 +374,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2023 Franco Luciano Aballay. Todos los derechos reservados.</p>
+                <p data-i18n="footer.derechos">&copy; 2023 Franco Luciano Aballay. Todos los derechos reservados.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/franco-luciano-aballay/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/frankko93/" target="_blank"><i class="fab fa-github"></i></a>

@@ -140,8 +140,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Sistema de cambio de idioma
-    const translations = {
+    // Language system with optional external JSON loading
+    let translations = null;
+    
+    // Function to load translations from external JSON file (optional)
+    async function loadTranslationsFromJSON() {
+        try {
+            const response = await fetch('./translations.json');
+            if (response.ok) {
+                const data = await response.json();
+                console.log('Translations loaded from external JSON file');
+                return data;
+            }
+        } catch (error) {
+            console.log('Could not load external translations, using embedded ones');
+        }
+        return null;
+    }
+    
+    // Initialize translations (try external first, fallback to embedded)
+    async function initializeTranslations() {
+        const externalTranslations = await loadTranslationsFromJSON();
+        
+        if (externalTranslations) {
+            translations = externalTranslations;
+        } else {
+            // Fallback to embedded translations
+            translations = {
         'es': {
             'nav': {
                 'sobreMi': 'Sobre mí',
@@ -477,8 +502,23 @@ document.addEventListener('DOMContentLoaded', function() {
             'footer': {
                 'derechos': '© 2023 Franco Luciano Aballay. Tutti i diritti riservati.'
             }
+            }
         }
-    };
+    }
+    
+    // Initialize the application
+    async function initializeApp() {
+        await initializeTranslations();
+        
+        // Check for saved language preference
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+        if (savedLanguage && translations[savedLanguage]) {
+            changeLanguage(savedLanguage);
+        }
+    }
+    
+    // Call initialization
+    initializeApp();
     
     // Función para aplicar traducciones usando atributos data-i18n
     function applyTranslations(lang) {
@@ -486,10 +526,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const key = element.getAttribute('data-i18n');
             const keys = key.split('.');
             
-            // Navegar por el objeto translations usando las claves
+            // Navigate through translations object using the keys
             let translation = translations[lang];
             for (const k of keys) {
-                // Manejar índices de array (para logros y otros arrays)
+                // Handle array indices (for achievements and other arrays)
                 if (!isNaN(k) && Array.isArray(translation)) {
                     translation = translation[parseInt(k)];
                 } else if (translation && translation[k] !== undefined) {
@@ -500,19 +540,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // Aplicar la traducción
+            // Apply the translation
             if (translation !== undefined) {
                 element.textContent = translation;
             }
         });
     }
     
-    // Función para cambiar el idioma
+    // Function to change language
     function changeLanguage(lang) {
-        // Actualizar el atributo lang del html
+        // Update html lang attribute
         document.documentElement.lang = lang;
         
-        // Actualizar clases activas en los botones de idioma
+        // Update active classes on language buttons
         languageButtons.forEach(button => {
             if (button.dataset.lang === lang) {
                 button.classList.add('active');
@@ -521,92 +561,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Guardar preferencia en localStorage
+        // Save preference in localStorage
         localStorage.setItem('preferredLanguage', lang);
         
-        // Aplicar traducciones usando los atributos data-i18n
+        // Apply translations using data-i18n attributes - this handles everything now!
         applyTranslations(lang);
-        
-        // Elementos que no tienen atributo data-i18n todavía
-        // Traducir la navegación
-        document.querySelectorAll('.nav-links a').forEach((link, index) => {
-            const navItems = ['sobreMi', 'experiencia', 'tecnologias', 'pasatiempos', 'contacto'];
-            link.textContent = translations[lang].nav[navItems[index]];
-        });
-        
-        // Traducir hero section
-        document.querySelector('.hero-text h2').textContent = translations[lang].hero.rol;
-        document.querySelector('.hero-text h3').textContent = translations[lang].hero.tagline;
-        document.querySelector('.hero-text .summary').textContent = translations[lang].hero.resumen;
-        document.querySelector('.hero-buttons .primary').textContent = translations[lang].hero.contactar;
-        document.querySelector('.hero-buttons .secondary').textContent = translations[lang].hero.verExperiencia;
-        
-        // Traducir sección sobre mí (ahora integrada en el hero)
-        document.querySelector('.about-me-header h4').textContent = translations[lang].sobreMi.titulo;
-        const profileParagraphs = document.querySelectorAll('.profile-details p');
-        if (profileParagraphs.length >= 2) {
-            profileParagraphs[0].textContent = translations[lang].sobreMi.parrafo1;
-            profileParagraphs[1].textContent = translations[lang].sobreMi.parrafo2;
-        }
-        
-        // Traducir sección pasatiempos
-        document.querySelector('#pasatiempos .section-title').textContent = translations[lang].pasatiempos.titulo;
-        
-        const hobbyItems = document.querySelectorAll('.hobby-item');
-        
-        hobbyItems[0].querySelector('h3').textContent = translations[lang].pasatiempos.deportes.titulo;
-        hobbyItems[0].querySelector('p').textContent = translations[lang].pasatiempos.deportes.descripcion;
-        
-        hobbyItems[1].querySelector('h3').textContent = translations[lang].pasatiempos.buceo.titulo;
-        hobbyItems[1].querySelector('p').textContent = translations[lang].pasatiempos.buceo.descripcion;
-        
-        hobbyItems[2].querySelector('h3').textContent = translations[lang].pasatiempos.fotografia.titulo;
-        hobbyItems[2].querySelector('p').textContent = translations[lang].pasatiempos.fotografia.descripcion;
-        
-        hobbyItems[3].querySelector('h3').textContent = translations[lang].pasatiempos.viajar.titulo;
-        hobbyItems[3].querySelector('p').textContent = translations[lang].pasatiempos.viajar.descripcion;
-        
-        hobbyItems[4].querySelector('h3').textContent = translations[lang].pasatiempos.tecnologia.titulo;
-        hobbyItems[4].querySelector('p').textContent = translations[lang].pasatiempos.tecnologia.descripcion;
-        
-        // Traducir sección contacto
-        document.querySelector('#contacto .section-title').textContent = translations[lang].contacto.titulo;
-        
-        const contactCards = document.querySelectorAll('.contact-card');
-        if (contactCards.length > 0) {
-            const titles = document.querySelectorAll('.contact-title');
-            const actionButtons = document.querySelectorAll('.contact-action-btn');
-            
-            // Traducir títulos
-            titles[0].textContent = translations[lang].contacto.correo;
-            titles[1].textContent = translations[lang].contacto.linkedin;
-            titles[2].textContent = translations[lang].contacto.github;
-            titles[3].textContent = translations[lang].contacto.instagram;
-            
-            // Traducir botones de acción
-            actionButtons[0].textContent = translations[lang].contacto.acciones.correo;
-            actionButtons[1].textContent = translations[lang].contacto.acciones.linkedin;
-            actionButtons[2].textContent = translations[lang].contacto.acciones.github;
-            actionButtons[3].textContent = translations[lang].contacto.acciones.instagram;
-        }
-        
-        // Traducir footer
-        document.querySelector('.footer-content p').textContent = translations[lang].footer.derechos;
     }
     
-    // Configurar los eventos para cambiar el idioma
+    // Configure language change events
     languageButtons.forEach(button => {
         button.addEventListener('click', function() {
             const lang = this.dataset.lang;
             changeLanguage(lang);
         });
     });
-    
-    // Revisar si hay un idioma preferido guardado
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    if (savedLanguage && translations[savedLanguage]) {
-        changeLanguage(savedLanguage);
-    }
     
     // Formulario de contacto
     if (contactForm) {
