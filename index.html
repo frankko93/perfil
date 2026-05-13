@@ -3,418 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Aballay | Software Engineer</title>
-    
-    <!-- Favicon personalizado con iniciales FA -->
+    <title>Franco Luciano Aballay | Backend &amp; Full Stack Engineer</title>
+    <meta name="description" content="Carta profesional de Franco Luciano Aballay, Backend &amp; Full Stack Engineer especializado en fintech, sistemas distribuidos, Go, Java y TypeScript.">
+    <meta name="keywords" content="Franco Aballay, Software Engineer, Backend Engineer, Full Stack Engineer, Go, Java, TypeScript, Fintech, Distributed Systems">
+    <meta name="author" content="Franco Luciano Aballay">
+    <meta name="theme-color" content="#0f172a">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
-    <!-- Favicon alternativo usando emoji para navegadores que no soporten SVG -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    
-    <!-- Para Apple Touch Icon (cuando se guarda en pantalla de inicio) -->
     <link rel="apple-touch-icon" href="favicon.svg">
-    
-    <!-- Meta tags adicionales para mejor SEO -->
-    <meta name="description" content="Franco Aballay - Software Engineer especializado en fintech. Creando el futuro, una línea de código a la vez.">
-    <meta name="keywords" content="Franco Aballay, Software Engineer, Fintech, JavaScript, Node.js, Golang, Java">
-    <meta name="author" content="Franco Aballay">
-    
+    <link rel="preload" as="image" href="img/perfil.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <nav>
-                <div class="logo">Franco Aballay</div>
-                <div class="nav-links">
-                    <a href="#hero" data-i18n="nav.sobreMi">Sobre mí</a>
-                    <a href="#experiencia" data-i18n="nav.experiencia">Experiencia</a>
-                    <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+            <nav aria-label="Navegación principal">
+                <div class="nav-links" id="main-navigation">
+                    <a href="#hero" data-i18n="nav.perfil">Perfil</a>
                     <a href="#tecnologias" data-i18n="nav.tecnologias">Tecnologías</a>
+                    <a href="#experiencia" data-i18n="nav.experiencia">Experiencia</a>
+                    <a href="#credenciales" data-i18n="nav.credenciales">Credenciales</a>
+                    <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
                     <a href="#pasatiempos" data-i18n="nav.pasatiempos">Pasatiempos</a>
                     <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
                 </div>
-                <div class="language-selector">
-                    <button class="active" data-lang="es">ES</button>
-                    <button data-lang="en">EN</button>
-                    <button data-lang="it">IT</button>
+                <div class="language-selector" aria-label="Selector de idioma">
+                    <button class="active" type="button" data-lang="es" aria-label="Español" title="Español">🇪🇸</button>
+                    <button type="button" data-lang="en" aria-label="English" title="English">🇬🇧</button>
+                    <button type="button" data-lang="it" aria-label="Italiano" title="Italiano">🇮🇹</button>
                 </div>
-                <div class="mobile-menu-btn">
+                <button class="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-navigation">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Franco Aballay</h1>
-                    <h2 data-i18n="hero.rol">Software Engineer | Consultor IT</h2>
-                    <h3 data-i18n="hero.tagline">Creando el futuro, una línea de código a la vez</h3>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Catania, Sicilia, Italia</p>
-                    <p class="summary" data-i18n="hero.resumen">Me encanta resolver problemas complejos y convertir ideas en realidad digital. Con más de 10 años trabajando en empresas como Mercado Libre y startups fintech, disfruto cada día construyendo tecnología que mejora la vida de las personas.</p>
-                    <div class="hero-buttons">
-                        <a href="#contacto" class="btn primary" data-i18n="hero.contactar">Contactar</a>
-                        <a href="#experiencia" class="btn secondary" data-i18n="hero.verExperiencia">Ver experiencia</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-image-container">
-                        <img src="img/perfil.png" alt="Franco Aballay">
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-label" data-i18n="hero.stats.anos">Años de experiencia</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">50+</span>
-                                <span class="stat-label" data-i18n="hero.stats.proyectos">Proyectos completados</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label" data-i18n="hero.stats.tecnologias">Tecnologías dominadas</span>
-                            </div>
+    <main>
+        <section id="hero" class="hero">
+            <canvas id="hero-3d" class="hero-3d" aria-hidden="true"></canvas>
+            <div class="hero-noise" aria-hidden="true"></div>
+            <div class="container hero-shell">
+                <div class="hero-content">
+                    <div class="hero-text reveal">
+                        <p class="eyebrow" data-i18n="hero.eyebrow">Carta profesional</p>
+                        <h1 class="typewriter-title" data-typewriter="Franco Luciano Aballay" aria-label="Franco Luciano Aballay">Franco Luciano Aballay</h1>
+                        <h2 data-i18n="hero.rol">Backend &amp; Full Stack Engineer | Go, Java, TypeScript</h2>
+                        <p class="location"><i class="fas fa-location-dot"></i> Mascali, Sicilia, Italia</p>
+                        <p class="summary" data-i18n="hero.resumen">Software Engineer con experiencia construyendo sistemas backend escalables y productos digitales en fintech y entornos de alta escala. Trabajo en Pomelo dentro del dominio Lending, contribuyendo a la infraestructura central de crédito que soporta productos de tarjetas para clientes en Latinoamérica.</p>
+                        <div class="hero-chips" aria-label="Especialidades principales">
+                            <span data-i18n="hero.chips.0">Sistemas distribuidos</span>
+                            <span data-i18n="hero.chips.1">Fintech</span>
+                            <span data-i18n="hero.chips.2">Microservicios</span>
+                            <span data-i18n="hero.chips.3">Arquitecturas cloud-native</span>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#contacto" class="btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                <span data-i18n="hero.contactar">Contactar</span>
+                            </a>
+                            <a href="#experiencia" class="btn secondary">
+                                <i class="fas fa-arrow-down"></i>
+                                <span data-i18n="hero.verExperiencia">Ver experiencia</span>
+                            </a>
                         </div>
                     </div>
+
+                    <aside class="hero-profile reveal" aria-label="Resumen profesional">
+                        <div class="portrait-frame">
+                            <img src="img/perfil.png" alt="Franco Luciano Aballay" loading="eager" decoding="async" fetchpriority="high">
+                        </div>
+                        <div class="current-focus">
+                            <span data-i18n="hero.currentLabel">Actualmente</span>
+                            <strong data-i18n="hero.current">Software Engineer en Pomelo</strong>
+                            <p data-i18n="hero.currentDetail">Backend, APIs, sistemas distribuidos, observabilidad y flujos de crédito para soluciones financieras regionales.</p>
+                        </div>
+                    </aside>
                 </div>
-            </div>
-            
-            <!-- Sobre mí section dentro del hero -->
-            <div class="about-content-hero">
-                <div class="about-text">
-                    <div class="about-me-header" id="sobre-mi">
-                        <h4 data-i18n="sobreMi.titulo">Un poco más sobre mí</h4>
-                        <div class="about-me-line"></div>
+
+                <div class="metrics-row reveal" aria-label="Indicadores profesionales">
+                    <div class="metric-item">
+                        <span class="metric-number">10+</span>
+                        <span data-i18n="hero.stats.anos">Años de experiencia</span>
                     </div>
-                    <p data-i18n="sobreMi.parrafo1">Soy de esas personas que ve un problema y piensa "¿cómo podemos hacer esto mejor?". He tenido la suerte de trabajar en proyectos increíbles, desde sistemas de pagos que usan millones de personas hasta plataformas que conectan comerciantes con sus sueños.</p>
-                    <p data-i18n="sobreMi.parrafo2">Lo que más me motiva es trabajar en equipo, compartir conocimiento y ver cómo nuestras ideas cobran vida. Cuando no estoy programando, probablemente esté aprendiendo algo nuevo, haciendo deporte o planeando mi próxima aventura de buceo.</p>
+                    <div class="metric-item">
+                        <span class="metric-number">LATAM</span>
+                        <span data-i18n="hero.stats.escala">Productos financieros regionales</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">3</span>
+                        <span data-i18n="hero.stats.idiomas">Idiomas de trabajo</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">AI</span>
+                        <span data-i18n="hero.stats.ai">Interés en workflows de desarrollo con IA</span>
+                    </div>
                 </div>
-                <div class="about-skills">
-                    <div class="skill-category">
-                        <h5 data-i18n="sobreMi.fortalezas">Fortalezas principales</h5>
+
+                <div class="about-content-hero reveal">
+                    <article class="about-text">
+                        <div class="section-kicker" data-i18n="sobreMi.kicker">Presentación</div>
+                        <h3 data-i18n="sobreMi.titulo">Ingeniería con criterio de producto</h3>
+                        <p data-i18n="sobreMi.parrafo1">Me especializo en transformar problemas complejos en soluciones simples, mantenibles y escalables. Disfruto trabajar cerca de producto, arquitectura y equipos cross-functional para convertir ideas en sistemas reales.</p>
+                        <p data-i18n="sobreMi.parrafo2">Mi recorrido combina fintech, comercio electrónico, plataformas web y liderazgo de pequeños equipos. Más allá de la tecnología, me movilizan el aprendizaje continuo, el emprendimiento, el deporte y las experiencias multiculturales.</p>
+                    </article>
+                    <article class="about-skills">
+                        <div class="section-kicker" data-i18n="sobreMi.fortalezas">Fortalezas principales</div>
                         <ul class="skills-list">
-                            <li data-i18n="sobreMi.skill1">Resolución de problemas complejos</li>
-                            <li data-i18n="sobreMi.skill2">Arquitectura de sistemas escalables</li>
-                            <li data-i18n="sobreMi.skill3">Liderazgo técnico y mentoring</li>
-                            <li data-i18n="sobreMi.skill4">Integración de APIs y microservicios</li>
+                            <li data-i18n="sobreMi.skill1">Backend services y APIs escalables</li>
+                            <li data-i18n="sobreMi.skill2">Microservicios y sistemas distribuidos</li>
+                            <li data-i18n="sobreMi.skill3">Arquitectura cloud, observabilidad y performance</li>
+                            <li data-i18n="sobreMi.skill4">Desarrollo full stack orientado a producto</li>
                         </ul>
-                    </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="experiencia" class="experience">
-        <div class="container">
-            <h2 class="section-title" data-i18n="experiencia.titulo">Experiencia Laboral</h2>
-            
-            <div class="job-card">
-                <div class="job-header">
-                    <h3 data-i18n="experiencia.actual.rol">Software Engineer</h3>
-                    <div class="company-info">
-                        <span class="company" data-i18n="experiencia.actual.empresa">Pomelo</span>
-                        <span class="period" data-i18n="experiencia.actual.periodo">2022 - Actualidad</span>
-                    </div>
+        <section id="tecnologias" class="technologies section-light">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker" data-i18n="tecnologias.kicker">Stack técnico</p>
+                    <h2 class="section-title" data-i18n="tecnologias.titulo">Tecnologías</h2>
                 </div>
-                <div class="job-description">
-                    <p data-i18n="experiencia.actual.descripcion">Desarrollo de soluciones fintech para procesamiento de pagos y servicios financieros, con enfoque principal en backend pero también contribuyendo al frontend. Implementación de APIs RESTful y arquitecturas escalables.</p>
-                    <ul class="job-highlights">
-                        <li data-i18n="experiencia.actual.logros.0">Desarrollo de microservicios con Node.js, TypeScript, Java, kotlin y Golang (Algunos con distintos framerworks)</li>
-                        <li data-i18n="experiencia.actual.logros.1">Implementación de distintas arquitecturas y servicios en AWS</li>
-                        <li data-i18n="experiencia.actual.logros.2">Integración con APIs de distintos proveedores (Governamentales, de Pagos, Regulatorios, etc)</li>
-                        <li data-i18n="experiencia.actual.logros.3">Optimización de rendimiento y seguridad de APIs</li>
-                    </ul>
+                <div class="tech-categories">
+                    <article class="tech-category reveal">
+                        <h3 data-i18n="tecnologias.categorias.backend">Backend y plataformas</h3>
+                        <div class="tech-items">
+                            <div class="tech-item"><i class="fab fa-golang"></i><span data-i18n="tecnologias.items.golang">Go</span></div>
+                            <div class="tech-item"><i class="fab fa-java"></i><span data-i18n="tecnologias.items.java">Java</span></div>
+                            <div class="tech-item"><svg role="img" viewBox="0 0 24 24" class="tech-icon" aria-label="Kotlin"><path d="M24 24H0V0h24L12 12Z"/></svg><span data-i18n="tecnologias.items.kotlin">Kotlin</span></div>
+                            <div class="tech-item"><i class="fab fa-node-js"></i><span data-i18n="tecnologias.items.node">Node.js / Express</span></div>
+                            <div class="tech-item"><i class="fas fa-cubes"></i><span data-i18n="tecnologias.items.microservices">Microservicios</span></div>
+                        </div>
+                    </article>
+                    <article class="tech-category reveal">
+                        <h3 data-i18n="tecnologias.categorias.producto">Frontend y producto</h3>
+                        <div class="tech-items">
+                            <div class="tech-item"><i class="fab fa-js"></i><span data-i18n="tecnologias.items.typescript">TypeScript</span></div>
+                            <div class="tech-item"><i class="fab fa-react"></i><span data-i18n="tecnologias.items.react">React</span></div>
+                            <div class="tech-item"><i class="fab fa-html5"></i><span data-i18n="tecnologias.items.html">HTML / CSS</span></div>
+                            <div class="tech-item"><i class="fas fa-layer-group"></i><span data-i18n="tecnologias.items.design">Diseño de producto digital</span></div>
+                        </div>
+                    </article>
+                    <article class="tech-category reveal">
+                        <h3 data-i18n="tecnologias.categorias.operacion">Datos, cloud y operación</h3>
+                        <div class="tech-items">
+                            <div class="tech-item"><i class="fas fa-database"></i><span data-i18n="tecnologias.items.postgresql">PostgreSQL</span></div>
+                            <div class="tech-item"><i class="fas fa-database"></i><span data-i18n="tecnologias.items.nosql">NoSQL / SQL</span></div>
+                            <div class="tech-item"><i class="fab fa-aws"></i><span data-i18n="tecnologias.items.cloud">Cloud / AWS</span></div>
+                            <div class="tech-item"><i class="fab fa-docker"></i><span data-i18n="tecnologias.items.docker">Docker</span></div>
+                            <div class="tech-item"><i class="fas fa-code-branch"></i><span data-i18n="tecnologias.items.cicd">CI/CD</span></div>
+                        </div>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <div class="job-card">
-                <div class="job-header">
-                    <h3 data-i18n="experiencia.anterior.rol">Fullstack Developer</h3>
-                    <div class="company-info">
-                        <span class="company" data-i18n="experiencia.anterior.empresa">Mercado Libre</span>
-                        <span class="period" data-i18n="experiencia.anterior.periodo">2019 - 2022</span>
-                    </div>
+        <section id="experiencia" class="experience">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker" data-i18n="experiencia.kicker">Trayectoria</p>
+                    <h2 class="section-title" data-i18n="experiencia.titulo">Experiencia profesional</h2>
                 </div>
-                <div class="job-description">
-                    <p data-i18n="experiencia.anterior.descripcion">Desarrollo fullstack para la plataforma de comercio y pagos electrónicos, implementando tanto servicios frontend como backend e interfaces de usuario, trabajando en equipos ágiles y contribuyendo a la mejora continua.</p>
-                    <ul class="job-highlights">
-                        <li data-i18n="experiencia.anterior.logros.0">Implementación de APIs escalables con NodeJS, Goland, Java y Spring Boot</li>
-                        <li data-i18n="experiencia.anterior.logros.1">Desarrollo de frontends con React y tecnologías afines</li>
-                        <li data-i18n="experiencia.anterior.logros.2">Integración con bases de datos NoSQL y relacionales</li>
-                        <li data-i18n="experiencia.anterior.logros.3">Implementación de patrones de diseño para microservicios</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="previous-experience">
-                <h3 class="previous-title">Otra experiencia previa...</h3>
-                <div class="previous-jobs">
-                    <div class="previous-job">
-                        <div class="job-role">Programador de sistemas</div>
-                        <div class="job-company">Secretaria de Estado de Deportes</div>
-                        <div class="job-period">julio 2018 - marzo 2019</div>
-                        <p class="job-brief">Provincia de San Juan, Argentina</p>
-                    </div>
-                    <div class="previous-job">
-                        <div class="job-role">Desarrollador de software de Java EE y Bases de Datos Oracle</div>
-                        <div class="job-company">Tarjeta de Crédito Fiel</div>
-                        <div class="job-period">septiembre 2016 - febrero 2018</div>
-                        <p class="job-brief">Provincia de San Juan, Argentina</p>
-                    </div>
-                    <div class="previous-job">
-                        <div class="job-role">Programador web</div>
-                        <div class="job-company">Aserto Diseño y Desarrollo Tecnólogicos</div>
-                        <div class="job-period">enero 2014 - agosto 2016</div>
-                        <p class="job-brief">Provincia de San Juan, Argentina</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="proyectos" class="projects">
-        <div class="container">
-            <h2 class="section-title" data-i18n="proyectos.titulo">Proyectos seleccionados</h2>
-            
-            <div class="projects-grid">
-                <!-- Proyecto 1 -->
-                    <a href="https://growth360.com.ar/" class="project-card" target="_blank">
+                <div class="timeline">
+                    <article class="job-card reveal">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-badge" data-i18n="experiencia.actual.area">Lending, crédito e identidad</span>
+                                <h3 data-i18n="experiencia.actual.rol">Software Engineer</h3>
+                            </div>
+                            <div class="company-info">
+                                <span class="company" data-i18n="experiencia.actual.empresa">Pomelo</span>
+                                <span class="period" data-i18n="experiencia.actual.periodo">Marzo 2022 - Actualidad</span>
+                            </div>
+                        </div>
+                        <p data-i18n="experiencia.actual.descripcion">Trabajo en la infraestructura core de lending y crédito que potencia productos de tarjetas ofrecidos por clientes de Pomelo en Latinoamérica, con foco principal en backend, APIs y sistemas distribuidos.</p>
+                        <ul class="job-highlights">
+                            <li data-i18n="experiencia.actual.logros.0">Desarrollo de servicios backend y APIs con Go, Java y TypeScript.</li>
+                            <li data-i18n="experiencia.actual.logros.1">Implementación de flujos de producto relacionados con crédito, lending e identidad.</li>
+                            <li data-i18n="experiencia.actual.logros.2">Evolución de arquitecturas de microservicios, escalabilidad, observabilidad y performance.</li>
+                            <li data-i18n="experiencia.actual.logros.3">Colaboración cross-functional con equipos de producto, ingeniería y stakeholders financieros.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job-card reveal">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-badge" data-i18n="experiencia.meli.area">Alta escala y producto regional</span>
+                                <h3 data-i18n="experiencia.meli.rol">Full Stack Engineer / Full Stack Engineer</h3>
+                            </div>
+                            <div class="company-info">
+                                <span class="company" data-i18n="experiencia.meli.empresa">Mercado Libre</span>
+                                <span class="period" data-i18n="experiencia.meli.periodo">Abril 2019 - Marzo 2022</span>
+                            </div>
+                        </div>
+                        <p data-i18n="experiencia.meli.descripcion">Desarrollé soluciones full stack y backend en entornos de alta escala, participando en aplicaciones modernas y sistemas distribuidos utilizados a nivel regional.</p>
+                        <ul class="job-highlights">
+                            <li data-i18n="experiencia.meli.logros.0">Backend con Go, Node.js, TypeScript, Express y principios de arquitectura limpia.</li>
+                            <li data-i18n="experiencia.meli.logros.1">Frontend con React y ecosistemas modernos de desarrollo web.</li>
+                            <li data-i18n="experiencia.meli.logros.2">Integración con PostgreSQL, bases NoSQL, Kibana y servicios distribuidos.</li>
+                            <li data-i18n="experiencia.meli.logros.3">Trabajo en equipos ágiles, diseño escalable y mejora continua de plataformas.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="previous-experience reveal">
+                    <h3 class="previous-title" data-i18n="experiencia.previa.titulo">Base técnica previa</h3>
+                    <div class="previous-jobs">
+                        <article class="previous-job">
+                            <span class="job-role" data-i18n="experiencia.previa.deportes.rol">Programador de sistemas</span>
+                            <span class="job-company" data-i18n="experiencia.previa.deportes.empresa">Secretaría de Estado de Deportes</span>
+                            <span class="job-period" data-i18n="experiencia.previa.deportes.periodo">Julio 2018 - Marzo 2019</span>
+                            <p data-i18n="experiencia.previa.deportes.descripcion">Sistemas internos y soporte tecnológico en San Juan, Argentina.</p>
+                        </article>
+                        <article class="previous-job">
+                            <span class="job-role" data-i18n="experiencia.previa.fiel.rol">Desarrollador Java EE y Oracle</span>
+                            <span class="job-company" data-i18n="experiencia.previa.fiel.empresa">Tarjeta de Crédito Fiel</span>
+                            <span class="job-period" data-i18n="experiencia.previa.fiel.periodo">Septiembre 2016 - Febrero 2018</span>
+                            <p data-i18n="experiencia.previa.fiel.descripcion">Desarrollo de software, bases de datos Oracle y soluciones para operación financiera.</p>
+                        </article>
+                        <article class="previous-job">
+                            <span class="job-role" data-i18n="experiencia.previa.aserto.rol">Programador web</span>
+                            <span class="job-company" data-i18n="experiencia.previa.aserto.empresa">Aserto Diseño y Desarrollo Tecnológicos</span>
+                            <span class="job-period" data-i18n="experiencia.previa.aserto.periodo">Enero 2014 - Agosto 2016</span>
+                            <p data-i18n="experiencia.previa.aserto.descripcion">PHP, jQuery, JavaScript, HTML5, MySQL y coordinación de equipos pequeños.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credenciales" class="credentials section-light">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker" data-i18n="credenciales.kicker">Formación e idiomas</p>
+                    <h2 class="section-title" data-i18n="credenciales.titulo">Credenciales profesionales</h2>
+                </div>
+                <div class="credentials-grid">
+                    <article class="credential-card reveal">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3 data-i18n="credenciales.educacion.titulo">Educación</h3>
+                        <ul>
+                            <li data-i18n="credenciales.educacion.items.0">Universidad Nacional de San Juan - Licenciatura en Ciencias de la Computación</li>
+                            <li data-i18n="credenciales.educacion.items.1">Cisco Networking Academy - Especialista en Redes, CCNA</li>
+                        </ul>
+                    </article>
+                    <article class="credential-card reveal">
+                        <i class="fas fa-certificate"></i>
+                        <h3 data-i18n="credenciales.certificaciones.titulo">Certificaciones</h3>
+                        <ul>
+                            <li data-i18n="credenciales.certificaciones.items.0">Técnico Programador Universitario</li>
+                            <li data-i18n="credenciales.certificaciones.items.1">Programador WEB</li>
+                            <li data-i18n="credenciales.certificaciones.items.2">Diseño Gráfico</li>
+                            <li data-i18n="credenciales.certificaciones.items.3">PADI Open Water Diver</li>
+                        </ul>
+                    </article>
+                    <article class="credential-card reveal">
+                        <i class="fas fa-language"></i>
+                        <h3 data-i18n="credenciales.idiomas.titulo">Idiomas</h3>
+                        <ul>
+                            <li><span class="language-flag" aria-hidden="true">🇪🇸</span><span data-i18n="credenciales.idiomas.items.0">Español: nativo o bilingüe</span></li>
+                            <li><span class="language-flag" aria-hidden="true">🇮🇹</span><span data-i18n="credenciales.idiomas.items.1">Italiano: competencia profesional</span></li>
+                            <li><span class="language-flag" aria-hidden="true">🇬🇧</span><span data-i18n="credenciales.idiomas.items.2">Inglés: competencia laboral limitada</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker" data-i18n="proyectos.kicker">Producto y ejecución</p>
+                    <h2 class="section-title" data-i18n="proyectos.titulo">Proyectos seleccionados</h2>
+                </div>
+                <div class="projects-grid">
+                    <a href="https://growth360.com.ar/" class="project-card reveal" target="_blank" rel="noreferrer">
+                        <span class="project-index">01</span>
                         <div class="project-content">
                             <h3 data-i18n="proyectos.proyecto1.titulo">Growth360</h3>
-                            <p data-i18n="proyectos.proyecto1.descripcion">Ecosistema estratégico integral para escalar negocios a 6/7 cifras</p>
+                            <p data-i18n="proyectos.proyecto1.descripcion">Ecosistema estratégico para crecimiento comercial y operación digital.</p>
                         </div>
-                        <div class="project-overlay">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
-
-                <!-- Proyecto 2 -->
-                    <a href="https://luluat.com.ar/" class="project-card" target="_blank">
+                    <a href="https://luluat.com.ar/" class="project-card reveal" target="_blank" rel="noreferrer">
+                        <span class="project-index">02</span>
                         <div class="project-content">
                             <h3 data-i18n="proyectos.proyecto2.titulo">Luluat</h3>
-                            <p data-i18n="proyectos.proyecto2.descripcion">Landing premium para marca de joyería de plata 925 artesanal</p>
+                            <p data-i18n="proyectos.proyecto2.descripcion">Landing premium para una marca de joyería artesanal en plata 925.</p>
                         </div>
-                        <div class="project-overlay">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
-
-                <!-- Proyecto 3 -->
-                    <a href="https://deapadel.it/" class="project-card" target="_blank">
+                    <a href="https://deapadel.it/" class="project-card reveal" target="_blank" rel="noreferrer">
+                        <span class="project-index">03</span>
                         <div class="project-content">
                             <h3 data-i18n="proyectos.proyecto3.titulo">DeaPadel</h3>
-                            <p data-i18n="proyectos.proyecto3.descripcion">Web multiidioma para centro de pádel profesional en Sicilia</p>
+                            <p data-i18n="proyectos.proyecto3.descripcion">Sitio multiidioma para centro deportivo profesional en Sicilia.</p>
                         </div>
-                        <div class="project-overlay">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
-
-                <!-- Proyecto 4 -->
-                    <a href="https://estiloapple.com.ar/el-secreto-de-apple/" class="project-card" target="_blank">
+                    <a href="https://estiloapple.com.ar/el-secreto-de-apple/" class="project-card reveal" target="_blank" rel="noreferrer">
+                        <span class="project-index">04</span>
                         <div class="project-content">
                             <h3 data-i18n="proyectos.proyecto4.titulo">Estilo Apple</h3>
-                            <p data-i18n="proyectos.proyecto4.descripcion">Landing de alto impacto para reparaciones premium de iPhone</p>
+                            <p data-i18n="proyectos.proyecto4.descripcion">Landing de conversión para servicio premium de reparación de iPhone.</p>
                         </div>
-                        <div class="project-overlay">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
-
-                <!-- Proyecto 5 -->
-                    <a href="https://ivan-design.com.ar/" class="project-card" target="_blank">
+                    <a href="https://ivan-design.com.ar/" class="project-card reveal" target="_blank" rel="noreferrer">
+                        <span class="project-index">05</span>
                         <div class="project-content">
                             <h3 data-i18n="proyectos.proyecto5.titulo">Ivan Design</h3>
-                            <p data-i18n="proyectos.proyecto5.descripcion">Landing artística para diseño personalizado de cascos de carreras</p>
+                            <p data-i18n="proyectos.proyecto5.descripcion">Experiencia visual para diseño personalizado de cascos de competición.</p>
                         </div>
-                        <div class="project-overlay">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="tecnologias" class="technologies">
-        <div class="container">
-            <h2 class="section-title" data-i18n="tecnologias.titulo">Tecnologías</h2>
-            <div class="tech-categories">
-                <div class="tech-category">
-                    <h3 data-i18n="tecnologias.categorias.lenguajes">Lenguajes</h3>
-                    <div class="tech-items">
-                        <div class="tech-item">
-                            <i class="fab fa-golang"></i>
-                            <span data-i18n="tecnologias.items.golang">Go (Golang)</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-java"></i>
-                            <span data-i18n="tecnologias.items.java">Java</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-js-square"></i>
-                            <span data-i18n="tecnologias.items.typescript">TypeScript</span>
-                        </div>
-                        <div class="tech-item">
-                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="tech-icon">
-                                <title>Kotlin</title>
-                                <path d="M24 24H0V0h24L12 12Z"/>
-                            </svg>
-                            <span data-i18n="tecnologias.items.kotlin">Kotlin</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-js"></i>
-                            <span data-i18n="tecnologias.items.js">JavaScript</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-html5"></i>
-                            <span data-i18n="tecnologias.items.html">HTML / CSS</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-database"></i>
-                            <span data-i18n="tecnologias.items.sql">SQL</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-terminal"></i>
-                            <span data-i18n="tecnologias.items.bash">Bash / Shell scripting</span>
-                        </div>
-                    </div>
+        <section id="pasatiempos" class="hobbies section-light">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker" data-i18n="pasatiempos.kicker">Fuera del código</p>
+                    <h2 class="section-title" data-i18n="pasatiempos.titulo">Pasatiempos</h2>
                 </div>
-                
-                <div class="tech-category">
-                    <h3 data-i18n="tecnologias.categorias.herramientas">Herramientas y tecnologías</h3>
-                    <div class="tech-items">
-                        <div class="tech-item">
-                            <i class="fab fa-aws"></i>
-                            <span data-i18n="tecnologias.items.aws">AWS</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span data-i18n="tecnologias.items.git">Git & GitHub</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-docker"></i>
-                            <span data-i18n="tecnologias.items.docker">Docker</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-leaf"></i>
-                            <span data-i18n="tecnologias.items.spring">Spring Boot</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-react"></i>
-                            <span data-i18n="tecnologias.items.react">React</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-node-js"></i>
-                            <span data-i18n="tecnologias.items.node">Node.js / Express</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span data-i18n="tecnologias.items.tailwind">Tailwind CSS</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-sync-alt"></i>
-                            <span data-i18n="tecnologias.items.cicd">CI/CD</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-database"></i>
-                            <span data-i18n="tecnologias.items.nosql">NoSQL / SQL</span>
-                        </div>
-                    </div>
+                <div class="hobbies-content">
+                    <article class="hobby-item reveal">
+                        <i class="fas fa-person-running"></i>
+                        <h3 data-i18n="pasatiempos.deportes.titulo">Deportes</h3>
+                        <p data-i18n="pasatiempos.deportes.descripcion">Me gusta mantenerme activo con pádel, fútbol y gimnasio. El deporte me ayuda a sostener disciplina, energía y foco.</p>
+                    </article>
+                    <article class="hobby-item reveal">
+                        <i class="fas fa-water"></i>
+                        <h3 data-i18n="pasatiempos.buceo.titulo">Buceo</h3>
+                        <p data-i18n="pasatiempos.buceo.descripcion">Soy buzo certificado PADI Open Water Diver y disfruto explorar el mundo submarino desde una perspectiva distinta.</p>
+                    </article>
+                    <article class="hobby-item reveal">
+                        <i class="fas fa-camera"></i>
+                        <h3 data-i18n="pasatiempos.fotografia.titulo">Fotografía</h3>
+                        <p data-i18n="pasatiempos.fotografia.descripcion">La fotografía me conecta con la observación, la composición y los detalles que suelen pasar desapercibidos.</p>
+                    </article>
+                    <article class="hobby-item reveal">
+                        <i class="fas fa-plane"></i>
+                        <h3 data-i18n="pasatiempos.viajar.titulo">Viajar y descubrir</h3>
+                        <p data-i18n="pasatiempos.viajar.descripcion">Me interesan las culturas, los idiomas y las experiencias auténticas, especialmente cerca del mar.</p>
+                    </article>
+                    <article class="hobby-item reveal">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 data-i18n="pasatiempos.tecnologia.titulo">Tecnología y aprendizaje continuo</h3>
+                        <p data-i18n="pasatiempos.tecnologia.descripcion">Exploro herramientas, inteligencia artificial y proyectos propios para seguir creciendo como ingeniero.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="pasatiempos" class="hobbies">
-        <div class="container">
-            <h2 class="section-title" data-i18n="pasatiempos.titulo">Pasatiempos</h2>
-        <div class="hobbies-content">
-            <div class="hobby-item">
-                <i class="fas fa-running"></i>
-                <h3 data-i18n="pasatiempos.deportes.titulo">Deportes</h3>
-                <p data-i18n="pasatiempos.deportes.descripcion">Me gusta mantenerme activo. Juego pádel y fútbol varias veces por semana, voy al gimnasio con regularidad y disfruto todo lo que implique movimiento y energía.</p>
-            </div>
-            <div class="hobby-item">
-                <i class="fas fa-water"></i>
-                <h3 data-i18n="pasatiempos.buceo.titulo">Buceo</h3>
-                <p data-i18n="pasatiempos.buceo.descripcion">Soy buzo certificado y me fascina explorar el mundo submarino. Es una forma única de conectar con la naturaleza desde otra perspectiva.</p>
-            </div>
-            <div class="hobby-item">
-                <i class="fas fa-camera"></i>
-                <h3 data-i18n="pasatiempos.fotografia.titulo">Fotografía</h3>
-                <p data-i18n="pasatiempos.fotografia.descripcion">La fotografía es una forma de capturar momentos, lugares y detalles que me inspiran. Es un hobby que combina creatividad con observación.</p>
-            </div>
-            <div class="hobby-item">
-                <i class="fas fa-plane"></i>
-                <h3 data-i18n="pasatiempos.viajar.titulo">Viajar y descubrir</h3>
-                <p data-i18n="pasatiempos.viajar.descripcion">Me encanta conocer nuevos lugares, culturas y comidas. Siempre busco experiencias auténticas, cerca del mar si es posible.</p>
-            </div>
-            <div class="hobby-item">
-                <i class="fas fa-laptop-code"></i>
-                <h3 data-i18n="pasatiempos.tecnologia.titulo">Tecnología y aprendizaje continuo</h3>
-                <p data-i18n="pasatiempos.tecnologia.descripcion">Siempre estoy explorando nuevas herramientas, aprendiendo sobre inteligencia artificial o metido en algún proyecto personal para seguir creciendo.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-i18n="contacto.titulo">Contacto</h2>
-            <div class="contact-links">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <span class="contact-title" data-i18n="contacto.correo">E-mail</span>
-                    <a href="mailto:frankko93@gmail.com" class="contact-action-btn" data-i18n="contacto.acciones.correo">Enviar correo</a>
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker" data-i18n="contacto.kicker">Conversemos</p>
+                    <h2 class="section-title" data-i18n="contacto.titulo">Contacto</h2>
                 </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin-in"></i>
+                <div class="contact-layout">
+                    <article class="contact-card contact-hero-card reveal">
+                        <span class="contact-availability">
+                            <i class="fas fa-circle" aria-hidden="true"></i>
+                            <span data-i18n="contacto.disponible">Disponible para conversaciones profesionales</span>
+                        </span>
+                        <figure class="contact-visual">
+                            <img src="img/miniyo.png" alt="Franco Aballay con mini-yo creativo" loading="lazy" decoding="async">
+                        </figure>
+                        <div>
+                            <h3 data-i18n="contacto.ctaTitulo">Construyamos productos sólidos, simples y escalables.</h3>
+                            <p data-i18n="contacto.ctaTexto">Si querés hablar sobre backend, fintech, arquitectura o desarrollo full stack con criterio de producto, este es el mejor punto de partida.</p>
+                        </div>
+                        <div class="contact-meta">
+                            <span><i class="fas fa-location-dot"></i><span data-i18n="contacto.meta.ubicacion">Mascali, Sicilia · LATAM / Europa</span></span>
+                            <span><i class="fas fa-code-branch"></i><span data-i18n="contacto.meta.foco">Backend, producto e IA aplicada</span></span>
+                        </div>
+                        <a href="mailto:franlaballay@gmail.com" class="btn primary contact-main-cta">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-i18n="contacto.acciones.principal">Escribime</span>
+                        </a>
+                    </article>
+                    <div class="contact-links">
+                        <article class="contact-card reveal">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <span class="contact-title" data-i18n="contacto.correo">E-mail</span>
+                            <p data-i18n="contacto.detalles.correo">Para propuestas, consultas profesionales o una primera conversación directa.</p>
+                            <a href="mailto:franlaballay@gmail.com" class="contact-action-btn" data-i18n="contacto.acciones.correo">Enviar correo</a>
+                        </article>
+                        <article class="contact-card reveal">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <span class="contact-title" data-i18n="contacto.linkedin">LinkedIn</span>
+                            <p data-i18n="contacto.detalles.linkedin">El mejor canal para conectar, revisar trayectoria y mantener contacto profesional.</p>
+                            <a href="https://www.linkedin.com/in/francoluciano-aballay/" target="_blank" rel="noreferrer" class="contact-action-btn" data-i18n="contacto.acciones.linkedin">Conectar</a>
+                        </article>
+                        <article class="contact-card reveal">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <span class="contact-title" data-i18n="contacto.github">GitHub</span>
+                            <p data-i18n="contacto.detalles.github">Proyectos, experimentos y señales técnicas de mi forma de construir software.</p>
+                            <a href="https://github.com/frankko93/" target="_blank" rel="noreferrer" class="contact-action-btn" data-i18n="contacto.acciones.github">Ver perfil</a>
+                        </article>
+                        <article class="contact-card reveal">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <span class="contact-title" data-i18n="contacto.instagram">Instagram</span>
+                            <p data-i18n="contacto.detalles.instagram">Un perfil más personal, con viajes, deporte, fotografía y vida cotidiana.</p>
+                            <a href="https://www.instagram.com/_francoaballay/" target="_blank" rel="noreferrer" class="contact-action-btn" data-i18n="contacto.acciones.instagram">Seguir</a>
+                        </article>
                     </div>
-                    <span class="contact-title" data-i18n="contacto.linkedin">LinkedIn</span>
-                    <a href="https://www.linkedin.com/in/franco-luciano-aballay/" target="_blank" class="contact-action-btn" data-i18n="contacto.acciones.linkedin">Conectar</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <span class="contact-title" data-i18n="contacto.github">GitHub</span>
-                    <a href="https://github.com/frankko93/" target="_blank" class="contact-action-btn" data-i18n="contacto.acciones.github">Ver perfil</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <span class="contact-title" data-i18n="contacto.instagram">Instagram</span>
-                    <a href="https://www.instagram.com/_francoaballay/" target="_blank" class="contact-action-btn" data-i18n="contacto.acciones.instagram">Seguir</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p data-i18n="footer.derechos">&copy; 2023 Franco Luciano Aballay. Todos los derechos reservados.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/franco-luciano-aballay/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/frankko93/" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.instagram.com/_francoaballay/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <p data-i18n="footer.derechos">&copy; 2026 Franco Luciano Aballay. Todos los derechos reservados.</p>
+                <div class="social-links" aria-label="Redes sociales">
+                    <a href="https://www.linkedin.com/in/francoluciano-aballay/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/frankko93/" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/_francoaballay/" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
-</html> 
+</html>
